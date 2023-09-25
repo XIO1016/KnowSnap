@@ -1,0 +1,30 @@
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+#    defer-datasource-initialization: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+  h2:
+    console:
+      enabled: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+springdoc:
+  enable-spring-security: true
+  api-docs:
+    version: openapi_3_0
+    groups:
+      enabled: true
+  cache:
+    disabled: true
+  packages-to-scan: com.xio.know_snap_back
+  swagger-ui:
+    tags-sorter: alpha
+    operations-sorter: alpha
+  default-consumes-media-type: application/json;charset=UTF-8
+  default-produces-media-type: application/json;charset=UTF-8
